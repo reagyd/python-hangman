@@ -71,13 +71,12 @@ def cur_guess_status(guess, cur_word):
 def init_stack(word):
     cur_stack = list(word) # initialize the stack with the word to guess as a list
     blank = "_"
-
-    for i in range(len(cur_stack)) :
+    for i in range(len(cur_stack)) : # get the lenth of the word to guess
         cur_stack[i] = "_"
     #print(' '.join(cur_stack))
-
-
     return (''.join(cur_stack))
+
+
 """This functioin compares the original word to the current stack to see if they are the same and returns ture if they are the same"""
 def check_win(orig_word, stack_word):
     if orig_word == stack_word:
@@ -106,11 +105,9 @@ def build_word(current_word, word_stack, guess_char):
             print("the wordstack is", word_stack[place])
     #print(' '.join(cur_stack))
     print(guess_char, word_stack[place])
-
     fword_state = (''.join(word_stack))
-
-
     return fword_state
+
 
 def draw_hangman():
     hangman = ""
